@@ -20,18 +20,18 @@
 2. 启动 HTTP 服务
 
     ```bash
-    flask run
+    python app.py
     ```
 3. Docker 部署
 
     ```bash
-    docker run --name down-lanzou -itd python bash -c "\
-    && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple\
+    docker run --name down-lanzou -p 5000:5000 -itd python bash -c "\
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple\
     && pip install requests\
     && pip install flask\
     && git clone https://kgithub.com/oyps/py-download-lanzou\
     && cd py*\
-    flask run"
+    && python app.py"
     ```
 
 ## API 说明
