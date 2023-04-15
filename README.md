@@ -10,13 +10,26 @@
 
 ## 使用方法
 
-运行 `app.py` 或者运行 `flask run` 命令，启动 HTTP 服务。
+1. 安装依赖
+    
+    ```bash
+    pip install requests
+    pip install flask
+    ```
+2. 启动 HTTP 服务
 
-- 请求地址：`/down`
-- 请求方式：GET
-- 请求参数
-  - `id`：文件分享 ID
-- 请求示例：`/down?id=iMFpo00t1y1g`
+    ```bash
+    flask run
+    ```
+
+## API 说明
+
+- 下载文件
+  - 请求地址：`/down`
+  - 请求方式：GET
+  - 请求参数
+    - `id`：文件分享 ID
+  - 请求示例：`/down?id=iMFpo00t1y1g`
 
 ## 拓展开发
 
