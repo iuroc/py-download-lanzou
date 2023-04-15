@@ -8,28 +8,34 @@
 - 会员版文件分享页：https://www.lanzoui.com/iXz3R0syjqwf
 - 普通版文件分享页：https://www.lanzoui.com/icjultg
 
-## 使用方法
+## 普通部署
 
-1. 安装依赖
+1. 下载代码
+
+    ```bash
+    git clone https://kgithub.com/oyps/py-download-lanzou
+    ```
+2. 安装依赖
     
     ```bash
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
     pip install requests
     pip install flask
     ```
-2. 启动 HTTP 服务
+3. 启动 HTTP 服务
 
     ```bash
     python app.py
     ```
-3. Docker 部署
 
-    ```bash
-    git clone https://kgithub.com/oyps/py-download-lanzou
-    docker build -t py-download-lanzou py-download-lanzou
-    docker run --name down-lanzou -p 5000:5000 py-download-lanzou
-    rm -rf py-download-lanzou
-    ```
+## Docker 部署
+
+  ```bash
+  git clone https://kgithub.com/oyps/py-download-lanzou
+  docker build -t py-download-lanzou py-download-lanzou
+  docker run --name down-lanzou -p 5000:5000 py-download-lanzou
+  rm -rf py-download-lanzou
+  ```
 
 ## API 说明
 
