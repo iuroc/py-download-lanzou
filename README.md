@@ -22,6 +22,17 @@
     ```bash
     flask run
     ```
+3. Docker 部署
+
+    ```bash
+    docker run --name down-lanzou -itd python bash -c "\
+    && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple\
+    && pip install requests\
+    && pip install flask\
+    && git clone https://kgithub.com/oyps/py-download-lanzou\
+    && cd py*\
+    flask run"
+    ```
 
 ## API 说明
 
