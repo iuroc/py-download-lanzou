@@ -33,7 +33,7 @@
   ```bash
   git clone https://kgithub.com/oyps/py-download-lanzou
   docker build -t py-download-lanzou py-download-lanzou
-  docker run --name down-lanzou -p 5000:5000 py-download-lanzou
+  docker run --name down-lanzou -p 5000:5000 -d py-download-lanzou
   rm -rf py-download-lanzou
   ```
 
