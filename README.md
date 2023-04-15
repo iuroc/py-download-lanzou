@@ -25,13 +25,10 @@
 3. Docker 部署
 
     ```bash
-    docker run --name down-lanzou -p 5000:5000 -itd python bash -c "\
-    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple\
-    && pip install requests\
-    && pip install flask\
-    && git clone https://kgithub.com/oyps/py-download-lanzou\
-    && cd py*\
-    && python app.py"
+    git clone https://kgithub.com/oyps/py-download-lanzou
+    docker build -t py-download-lanzou py-download-lanzou
+    docker run --name down-lanzou -p 5000:5000 py-download-lanzou
+    rm -rf py-download-lanzou
     ```
 
 ## API 说明
